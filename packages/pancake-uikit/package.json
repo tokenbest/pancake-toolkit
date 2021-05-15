@@ -1,6 +1,6 @@
 {
-  "name": "@onlyswap/uikit",
-  "version": "0.33.0",
+  "name": "@tokenbest/uikit",
+  "version": "0.33.1",
   "description": "Set of UI components for pancake projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -52,5 +52,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "b5f54321fd07b7fda0299c1e4a3214873f00efdd"
 }
