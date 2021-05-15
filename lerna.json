@@ -2,7 +2,7 @@
   "packages": ["packages/*"],
   "version": "independent",
   "npmClient": "yarn",
-  "workspaces": true,
+  "useWorkspaces": true,
   "ignoreChanges": ["**/__tests__/**", "**/*.md", "**/.storybook/**"],
   "command": {
     "version": {
