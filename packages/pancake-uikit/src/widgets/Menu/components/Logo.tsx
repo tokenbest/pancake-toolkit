@@ -5,6 +5,7 @@ import { LogoIcon } from "../../../components/Svg";
 import Flex from "../../../components/Box/Flex";
 import { HamburgerIcon, HamburgerCloseIcon, LogoIcon as LogoWithText } from "../icons";
 import MenuButton from "./MenuButton";
+import { Text } from "../../../components/Text";
 
 interface Props {
   isPushed: boolean;
@@ -53,7 +54,8 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const innerLogo = (
     <>
       <LogoIcon className="mobile-icon" />
-      <LogoWithText className="desktop-icon" isDark={isDark} />
+      {/* <LogoWithText className="desktop-icon" isDark={isDark} /> */}
+      <Text bold fontSize="24px">ONLY TOKEN</Text>
     </>
   );
 
