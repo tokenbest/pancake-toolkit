@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+import styled, { keyframes }  from "styled-components";
 import throttle from "lodash/throttle";
 import Overlay from "../../components/Overlay/Overlay";
 import Flex from "../../components/Box/Flex";
+import { Text } from "../../components/Text";
 import { useMatchBreakpoints } from "../../hooks";
+import { CogIcon, LogoIcon, NoProfileAvatarIcon } from "../../components/Svg";
 import Logo from "./components/Logo";
 import Panel from "./components/Panel";
 import UserBlock from "./components/UserBlock";
@@ -47,8 +50,46 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   max-width: 100%;
 
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
+    // margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
+    // max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
+    margin-left: 28px;
+    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? 28 : 28}px)`};
+  }
+`;
+
+const blink = keyframes`
+  0%,  100% { transform: scaleY(1); } 
+  50% { transform:  scaleY(0.1); } 
+`;
+
+const StyledLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  .mobile-icon {
+    width: 32px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      display: none;
+    }
+  }
+  .desktop-icon {
+    width: 160px;
+    display: none;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      display: block;
+    }
+  }
+  .right-eye {
+    animation-delay: 20ms;
+  }
+  &:hover {
+    .left-eye,
+    .right-eye {
+      transform-origin: center 60%;
+      animation-name: ${blink};
+      animation-duration: 350ms;
+      animation-iteration-count: 1;
+    }
   }
 `;
 
@@ -112,23 +153,31 @@ const Menu: React.FC<NavProps> = ({
 
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
-
+  
   return (
     <Wrapper>
       <StyledNav showMenu={showMenu}>
+        <Flex>
         <Logo
           isPushed={isPushed}
           togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
-        <Flex>
+        </Flex>
+        <Flex> 
+          <StyledLink to={homeLink?.href ?? "/"} aria-label="OnlyToken home page">
+            <NoProfileAvatarIcon width="24px" height="24px" />
+          </StyledLink>
+          <StyledLink to={homeLink?.href ?? "/"} aria-label="OnlyToken home page" style={{paddingRight:"12px"}}>
+            <CogIcon width="24px" height="24px" />
+          </StyledLink>        
           <UserBlock account={account} login={login} logout={logout} />
-          {profile && <Avatar profile={profile} />}
+
         </Flex>
       </StyledNav>
       <BodyWrapper>
-        <Panel
+        {/* <Panel
           isPushed={isPushed}
           isMobile={isMobile}
           showMenu={showMenu}
@@ -140,7 +189,7 @@ const Menu: React.FC<NavProps> = ({
           cakePriceUsd={cakePriceUsd}
           pushNav={setIsPushed}
           links={links}
-        />
+        /> */}
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
         </Inner>
