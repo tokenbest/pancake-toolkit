@@ -36,6 +36,7 @@ const StyledLink = styled(Link)`
       display: block;
     }
   }
+  
   .right-eye {
     animation-delay: 20ms;
   }
@@ -50,13 +51,25 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const MenuLink = styled(Link)`
+  .desktop-menu-icon {
+    width: 24px;
+    margin-right:8px;
+    display: none;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      display: block;
+    }
+  }
+`;
+
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoIcon className="mobile-icon" />
-      {/* <LogoWithText className="desktop-icon" isDark={isDark} /> */}
-      <Text bold fontSize="24px" color="#1FC7D4">ONLY TOKEN</Text>
+      {/* <LogoIcon className="mobile-icon" /> */}
+      <Text className="mobile-icon" bold fontSize="24px" color="#1FC7D4">OT</Text>
+      {/*<LogoWithText className="desktop-icon" isDark={isDark} /> */}
+      <Text className="desktop-icon" bold fontSize="24px" color="#1FC7D4">ONLY TOKEN</Text>
     </>
   );
 
@@ -70,31 +83,36 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
         )}
       </MenuButton> */}
       {isAbsoluteUrl ? (
-        <StyledLink as="a" href={href} aria-label="OnlyToken home page">
-          {innerLogo}
-        </StyledLink>
+        <Flex>
+          <StyledLink as="a" href={href} aria-label="OnlyToken home page">
+            {innerLogo}
+          </StyledLink>
+        </Flex>
       ) : (
+        <Flex>
         <StyledLink to={href} aria-label="OnlyToken home page">
           {innerLogo}
         </StyledLink>
+          <Flex style={{ marginLeft: "48px" }} verticalAlign="bottom" height="64px" alignItems="flex-end" paddingBottom="10px">
+            <MenuLink to={href} aria-label="OnlyToken home page">
+              <NoProfileAvatarIcon className="desktop-menu-icon" width="24px" height="24px" />
+            </MenuLink>
+            <MenuLink to={href} aria-label="OnlyToken home page">
+              <CogIcon className="desktop-menu-icon" width="24px" height="24px" />
+            </MenuLink>
+            <MenuLink to={href} aria-label="OnlyToken home page">
+              <NoProfileAvatarIcon className="desktop-menu-icon" width="24px" height="24px" />
+            </MenuLink>
+            <MenuLink to={href} aria-label="OnlyToken home page">
+              <CogIcon className="desktop-menu-icon" width="24px" height="24px" />
+            </MenuLink>
+            <MenuLink to={href} aria-label="OnlyToken home page">
+              <NoProfileAvatarIcon className="desktop-menu-icon" width="24px" height="24px" />
+            </MenuLink>
+          </Flex>
+      </Flex>
       )}
-      <Flex style={{ marginLeft: "48px" }} verticalAlign="bottom" height="64px" alignItems="flex-end" paddingBottom="10px">
-        <StyledLink to={href} aria-label="OnlyToken home page">
-          <NoProfileAvatarIcon width="24px" height="24px" />
-        </StyledLink>
-        <StyledLink to={href} aria-label="OnlyToken home page">
-          <CogIcon width="24px" height="24px" />
-        </StyledLink>
-        <StyledLink to={href} aria-label="OnlyToken home page">
-          <NoProfileAvatarIcon width="24px" height="24px" />
-        </StyledLink>
-        <StyledLink to={href} aria-label="OnlyToken home page">
-          <CogIcon width="24px" height="24px" />
-        </StyledLink>
-        <StyledLink to={href} aria-label="OnlyToken home page">
-          <NoProfileAvatarIcon width="24px" height="24px" />
-        </StyledLink>
-      </Flex>        
+              
     </Flex>
   );
 };
