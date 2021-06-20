@@ -166,7 +166,7 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         </Flex>
-        <Flex> 
+        <Flex verticalAlign="bottom" alignItems="flex-end" height="64px"  paddingBottom="10px"> 
 
           <StyledLink to={homeLink?.href ?? "/"} aria-label="OnlyToken home page" style={{paddingRight:"12px"}}>
           <PmailIcon width="24px" height="24px" />

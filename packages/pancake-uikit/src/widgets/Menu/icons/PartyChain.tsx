@@ -8,7 +8,7 @@ const Icon: React.FC<SvgProps> = (props) => {
 
       <defs>
       <linearGradient id="cls-1" x1="-6.61" y1="236.01" x2="363.17" y2="-239.03" gradientTransform="matrix(1, 0, 0, -1, 0, 511.98)" gradientUnits="userSpaceOnUse"><stop offset="0.35" stop-color="#00fcd4"/><stop offset="0.61" stop-color="#7eb7ec"/><stop offset="0.78" stop-color="#89b1ee"/><stop offset="0.78" stop-color="#89b1ee"/><stop offset="0.99" stop-color="#8bb0ee"/></linearGradient>
-      <linearGradient id="cls-2" x1="205.29" y1="457.11" x2="959.27" y2="127.24" xlinkHref="#未命名的渐变"/>
+      <linearGradient id="cls-2" x1="205.29" y1="457.11" x2="959.27" y2="127.24" xlinkHref="#cls-1"/>
       <linearGradient id="cls-3" x1="333.36" y1="236.77" x2="483.21" y2="87.4" gradientTransform="matrix(1, 0, 0, -1, 0, 511.98)" gradientUnits="userSpaceOnUse"><stop offset="0.35" stop-color="#43b6f2"/><stop offset="0.71" stop-color="#6997ff"/><stop offset="0.8" stop-color="#6997ff"/></linearGradient>
       <linearGradient id="cls-4" x1="344.92" y1="349.94" x2="553.59" y2="184.65" xlinkHref="#cls-3"/>
       <linearGradient id="cls-5" x1="251.67" y1="234.69" x2="324.67" y2="171.01" xlinkHref="#cls-3"/>
