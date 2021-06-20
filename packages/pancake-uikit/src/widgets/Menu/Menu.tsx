@@ -80,6 +80,12 @@ const StyledLink = styled(Link)`
       display: block;
     }
   }
+  .disktop-mail-icon {
+    display: none;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      display: block;
+    }
+  }
   .right-eye {
     animation-delay: 20ms;
   }
@@ -168,8 +174,8 @@ const Menu: React.FC<NavProps> = ({
         </Flex>
         <Flex verticalAlign="bottom" alignItems="flex-end" height="64px"  paddingBottom="10px"> 
 
-          <StyledLink to={homeLink?.href ?? "/"} aria-label="OnlyToken home page" style={{paddingRight:"12px"}}>
-          <PmailIcon width="24px" height="24px" />
+          <StyledLink to={homeLink?.href ?? "/"} aria-label="OnlyToken home page" style={{paddingRight:"12px"}} >
+          <PmailIcon width="24px" height="24px" className="disktop-mail-icon"/>
           </StyledLink>        
           <UserBlock account={account} login={login} logout={logout} />
 

@@ -97,7 +97,6 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
           <Flex style={{ marginLeft: "48px" }} verticalAlign="bottom" height="64px" alignItems="flex-end" paddingBottom="10px">
             <MenuLink to={href} aria-label="Partychain home page">
               <PhomeIcon  className="desktop-menu-icon" width="24px" height="24px" />
-              {/* <NoProfileAvatarIcon className="desktop-menu-icon" width="24px" height="24px" /> */}
             </MenuLink>
             <MenuLink to={href} aria-label="Partychain home page">
               <PfindIcon className="desktop-menu-icon" width="24px" height="24px" />
