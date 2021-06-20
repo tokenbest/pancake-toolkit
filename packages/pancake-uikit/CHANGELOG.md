@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.34.6](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@tokenbest/uikit@0.34.5...@tokenbest/uikit@0.34.6) (2021-06-20)
+
+**Note:** Version bump only for package @tokenbest/uikit
+
+
+
+
+
 ## [0.34.5](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@tokenbest/uikit@0.34.4...@tokenbest/uikit@0.34.5) (2021-06-20)
 
 **Note:** Version bump only for package @tokenbest/uikit
