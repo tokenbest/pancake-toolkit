@@ -6,7 +6,7 @@ import Overlay from "../../components/Overlay/Overlay";
 import Flex from "../../components/Box/Flex";
 import { Text } from "../../components/Text";
 import { useMatchBreakpoints } from "../../hooks";
-import { CogIcon, LogoIcon, NoProfileAvatarIcon } from "../../components/Svg";
+import { CogIcon, LogoIcon, NoProfileAvatarIcon,PmailIcon } from "../../components/Svg";
 import Logo from "./components/Logo";
 import Panel from "./components/Panel";
 import UserBlock from "./components/UserBlock";
@@ -32,7 +32,7 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   width: 100%;
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
-  background-image:-webkit-linear-gradient(0deg, #5e85fc 0%, #c46dfd 100%);
+  // background-image:-webkit-linear-gradient(0deg, #5e85fc 0%, #c46dfd 100%);
   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
@@ -167,11 +167,9 @@ const Menu: React.FC<NavProps> = ({
         />
         </Flex>
         <Flex> 
-          <StyledLink to={homeLink?.href ?? "/"} aria-label="OnlyToken home page">
-            <NoProfileAvatarIcon width="24px" height="24px" />
-          </StyledLink>
+
           <StyledLink to={homeLink?.href ?? "/"} aria-label="OnlyToken home page" style={{paddingRight:"12px"}}>
-            <CogIcon width="24px" height="24px" />
+          <PmailIcon width="24px" height="24px" />
           </StyledLink>        
           <UserBlock account={account} login={login} logout={logout} />
 
