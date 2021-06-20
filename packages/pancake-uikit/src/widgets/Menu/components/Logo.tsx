@@ -69,7 +69,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
       {/* <LogoIcon className="mobile-icon" /> */}
       <Text className="mobile-icon" bold fontSize="24px" color="#1FC7D4">OT</Text>
       {/* <LogoWithText className="desktop-icon" isDark={isDark} /> */}
-      <PartyChainIcon  hieght="64px"/>
+      <PartyChainIcon  height="64px"/>
       <Text className="desktop-icon" bold fontSize="24px" color="#1FC7D4"></Text>
     </>
   );
