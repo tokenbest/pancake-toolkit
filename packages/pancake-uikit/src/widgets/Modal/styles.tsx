@@ -8,7 +8,6 @@ import { ModalProps } from "./types";
 
 export const ModalHeader = styled.div<{ background?: string }>`
   align-items: center;
-  background: ${({ background }) => background || "transparent"};
   border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   display: flex;
   padding: 12px 24px;
@@ -17,10 +16,16 @@ export const ModalHeader = styled.div<{ background?: string }>`
 export const ModalTitle = styled(Flex)`
   align-items: center;
   flex: 1;
+  color:#39D6FE;
 `;
 
 export const ModalBody = styled(Flex)`
   flex-direction: column;
+
+  button{
+    background: #003178;
+    opacity:1;
+  }
 `;
 
 export const ModalCloseButton: React.FC<{ onDismiss: ModalProps["onDismiss"] }> = ({ onDismiss }) => {
@@ -41,9 +46,10 @@ export const ModalBackButton: React.FC<{ onBack: ModalProps["onBack"] }> = ({ on
 
 export const ModalContainer = styled(Box)<{ minWidth: string }>`
   overflow: hidden;
-  background: ${({ theme }) => theme.modal.background};
-  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
-  border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  background: #010C1C;
+  opacity:0.5;
+  // box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
+  // border: 1px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 32px;
   width: 100%;
   z-index: ${({ theme }) => theme.zIndices.modal};

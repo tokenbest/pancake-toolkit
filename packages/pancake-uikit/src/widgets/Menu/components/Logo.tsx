@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import { CogIcon, LogoIcon, NoProfileAvatarIcon } from "../../../components/Svg";
 import Flex from "../../../components/Box/Flex";
-import { HamburgerIcon, HamburgerCloseIcon, LogoIcon as LogoWithText, PartyChainIcon,HomeIcon,PfindIcon,PhomeIcon,PstarIcon,PbagIcon,PdoctorIcon,PinfoIcon } from "../icons";
+import { HamburgerIcon, HamburgerCloseIcon, LogoIcon as LogoWithText, PartyChainIcon, HomeIcon, PfindIcon, PhomeIcon, PstarIcon, PbagIcon, PdoctorIcon, PinfoIcon } from "../icons";
 import MenuButton from "./MenuButton";
 import { Text } from "../../../components/Text";
 
@@ -69,7 +69,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
       {/* <LogoIcon className="mobile-icon" /> */}
       <Text className="mobile-icon" bold fontSize="24px" color="#1FC7D4">PartyChain</Text>
       {/* <LogoWithText className="desktop-icon" isDark={isDark} /> */}
-      <PartyChainIcon  className="desktop-icon"  height="60px"/>
+      <PartyChainIcon className="desktop-icon" height="60px" />
       {/* <Text className="desktop-icon" bold fontSize="24px" color="#1FC7D4"></Text> */}
     </>
   );
@@ -90,13 +90,13 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
           </StyledLink>
         </Flex>
       ) : (
-        <Flex>
-        <StyledLink to={href} aria-label="Partychain home page">
-          {innerLogo}
-        </StyledLink>
+        <Flex >
+          <StyledLink to={href} aria-label="Partychain home page">
+            {innerLogo}
+          </StyledLink>
           <Flex style={{ marginLeft: "48px" }} verticalAlign="bottom" height="64px" alignItems="flex-end" paddingBottom="10px">
             <MenuLink to={href} aria-label="Partychain home page">
-              <PhomeIcon  className="desktop-menu-icon" width="24px" height="24px" />
+              <PhomeIcon className="desktop-menu-icon" width="24px" height="24px" />
             </MenuLink>
             <MenuLink to={href} aria-label="Partychain home page">
               <PfindIcon className="desktop-menu-icon" width="24px" height="24px" />
@@ -110,13 +110,13 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
             <MenuLink to={href} aria-label="Partychain home page">
               <PdoctorIcon className="desktop-menu-icon" width="24px" height="24px" />
             </MenuLink>
-            <MenuLink to={"/whitepaper.htnl"} aria-label="Partychain white paper">
+            <MenuLink to="/whitepaper.htnl" aria-label="Partychain white paper">
               <PinfoIcon className="desktop-menu-icon" width="24px" height="24px" />
             </MenuLink>
           </Flex>
-      </Flex>
+        </Flex>
       )}
-              
+
     </Flex>
   );
 };
