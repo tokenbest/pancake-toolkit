@@ -1,11 +1,9 @@
 import React from "react";
 import { SvgProps } from "../../../components/Svg/types";
-import imgURL from "../images/pbag.png";
-
 
 const Icon: React.FC<SvgProps> = (props) => {
   return (
-    <img src={imgURL}  style={{marginRight:'15px'}} width="40" alt="" />
+    <img src='/static/media/src/widgets/Menu/images/pbag.png'  style={{marginRight:'15px'}} width="40" alt="" />
 
     // <Svg viewBox="0 0 512 512" {...props}>
     //   <path 
