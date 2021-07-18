@@ -62,6 +62,17 @@ const MenuLink = styled(Link)`
   }
 `;
 
+const ExtMenuLink = styled.a`
+  .desktop-menu-icon {
+    width: 24px;
+    margin-right:8px;
+    display: none;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      display: block;
+    }
+  }
+`;
+
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
@@ -110,9 +121,9 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
             <MenuLink to={href} aria-label="Partychain home page">
               <PdoctorIcon className="desktop-menu-icon" width="24px" height="24px" />
             </MenuLink>
-            <MenuLink to="/whitepaper.html"  aria-label="Partychain white paper">
+            <ExtMenuLink href="/whitepaper.html"  aria-label="Partychain white paper">
               <PinfoIcon className="desktop-menu-icon" width="24px" height="24px" />
-            </MenuLink>
+            </ExtMenuLink>
           </Flex>
         </Flex>
       )}
