@@ -110,7 +110,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
             <MenuLink to={href} aria-label="Partychain home page">
               <PdoctorIcon className="desktop-menu-icon" width="24px" height="24px" />
             </MenuLink>
-            <MenuLink to="/whitepaper.html" aria-label="Partychain white paper">
+            <MenuLink href="http://partychain.club/whitepaper.html" aria-label="Partychain white paper">
               <PinfoIcon className="desktop-menu-icon" width="24px" height="24px" />
             </MenuLink>
           </Flex>
