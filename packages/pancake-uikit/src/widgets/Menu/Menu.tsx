@@ -158,7 +158,7 @@ const Menu: React.FC<NavProps> = ({
     };
   }, []);
 
-  // Find the home link if provided
+  // Find the home link if provided xxx
   const homeLink = links.find((link) => link.label === "Home");
 
   return (
