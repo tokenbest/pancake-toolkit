@@ -1,7 +1,5 @@
-import { log } from "npmlog";
 import React from "react";
 import { SvgProps } from "../../../components/Svg/types";
-import svg from './partychain-01(1).svg'
 
 const Icon: React.FC<SvgProps> = (props) => {
   return (
