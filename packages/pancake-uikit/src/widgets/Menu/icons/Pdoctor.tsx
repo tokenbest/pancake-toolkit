@@ -3,7 +3,7 @@ import { SvgProps } from "../../../components/Svg/types";
 
 const Icon: React.FC<SvgProps> = (props) => {
   return (
-    <img src='/static/media/src/widgets/Menu/images/pdoctor.png'  style={{marginRight:'15px'}} width="40" alt="" />
+    <img src='/images/slices/pdoctor.png'  style={{marginRight:'15px'}} width="40" alt="" />
 
     // <Svg viewBox="0 0 512 512" {...props}>
     //   <path 
