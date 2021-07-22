@@ -1,4 +1,7 @@
-52 error Error: Command failed with exit code 128: git push --follow-tags --no-verify --atomic origin master
-52 error fatal: unable to access 'https://github.com/tokenbest/pancake-toolkit.git/': Failed to connect to github.com port 443: Connection was aborted
-52 error     at makeError (E:\prgfiles\nodejs\node_global\node_modules\lerna\node_modules\execa\lib\error.js:59:11)
-52 error     at handlePromise (E:\prgfiles\nodejs\node_global\node_modules\lerna\node_modules\execa\index.js:114:26)
+48 error Error: Command failed with exit code 128: git tag @tokenbest/uikit@0.34.22 -m @tokenbest/uikit@0.34.22
+48 error fatal: tag '@tokenbest/uikit@0.34.22' already exists
+48 error     at makeError (E:\prgfiles\nodejs\node_global\node_modules\lerna\node_modules\execa\lib\error.js:59:11)
+48 error     at handlePromise (E:\prgfiles\nodejs\node_global\node_modules\lerna\node_modules\execa\index.js:114:26)
+48 error     at processTicksAndRejections (node:internal/process/task_queues:94:5)
+48 error     at async Promise.all (index 0)
+48 error     at async Promise.all (index 0)
