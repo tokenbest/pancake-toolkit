@@ -3,5 +3,4 @@
 48 error     at makeError (E:\prgfiles\nodejs\node_global\node_modules\lerna\node_modules\execa\lib\error.js:59:11)
 48 error     at handlePromise (E:\prgfiles\nodejs\node_global\node_modules\lerna\node_modules\execa\index.js:114:26)
 48 error     at processTicksAndRejections (node:internal/process/task_queues:94:5)
-48 error     at async Promise.all (index 0)
-48 error     at async Promise.all (index 0)
+
