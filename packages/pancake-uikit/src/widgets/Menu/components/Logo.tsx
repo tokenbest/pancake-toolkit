@@ -1,11 +1,9 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
-import { CogIcon, LogoIcon, NoProfileAvatarIcon } from "../../../components/Svg";
 import Flex from "../../../components/Box/Flex";
-import { HamburgerIcon, HamburgerCloseIcon, LogoIcon as LogoWithText, PartyChainIcon, HomeIcon, PfindIcon, PhomeIcon, PstarIcon, PbagIcon, PdoctorIcon, PinfoIcon } from "../icons";
-import MenuButton from "./MenuButton";
-import { Text } from "../../../components/Text";
+import { PartyChainIcon } from "../icons";
+// import { Text } from "../../../components/Text";
 
 interface Props {
   isPushed: boolean;
@@ -23,17 +21,10 @@ const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   margin-left: 12px;
-  .mobile-icon {
-    width: 32px;
-    ${({ theme }) => theme.mediaQueries.nav} {
-      display: none;
-    }
-  }
+
   .desktop-icon {
-    width: 160px;
-    display: none;
-    ${({ theme }) => theme.mediaQueries.nav} {
-      display: block;
+    @media screen and (min-width: 360px) and (max-width: 375px) {
+      width: 101px;
     }
   }
   
@@ -51,23 +42,14 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const MenuLink = styled(Link)`
-  .desktop-menu-icon {
-    width: 24px;
-    margin-right:8px;
-    display: none;
-    ${({ theme }) => theme.mediaQueries.nav} {
-      display: block;
-    }
-  }
-`;
 
-const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
+
+const Logo: React.FC<Props> = ({ href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      {/* <LogoIcon className="mobile-icon" /> */}
-      <Text className="mobile-icon" bold fontSize="24px" color="#1FC7D4">PartyChain</Text>
+      {/* <LogoIcon className="mobile-icon" />
+      <Text className="mobile-icon" bold fontSize="24px" color="#1FC7D4">PartyChain</Text> */}
       {/* <LogoWithText className="desktop-icon" isDark={isDark} /> */}
       <PartyChainIcon className="desktop-icon" height="60px" />
       {/* <Text className="desktop-icon" bold fontSize="24px" color="#1FC7D4"></Text> */}
@@ -94,26 +76,6 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
           <StyledLink to={href} aria-label="Partychain home page">
             {innerLogo}
           </StyledLink>
-          <Flex style={{ marginLeft: "48px" }} verticalAlign="bottom" height="64px" alignItems="flex-end" paddingBottom="10px">
-            <MenuLink to={href} aria-label="Partychain home page">
-              <PhomeIcon className="desktop-menu-icon" width="24px" height="24px" />
-            </MenuLink>
-            <MenuLink to={href} aria-label="Partychain home page">
-              <PfindIcon className="desktop-menu-icon" width="24px" height="24px" />
-            </MenuLink>
-            <MenuLink to={href} aria-label="Partychain home page">
-              <PstarIcon className="desktop-menu-icon" width="24px" height="24px" />
-            </MenuLink>
-            <MenuLink to={href} aria-label="Partychain home page">
-              <PbagIcon className="desktop-menu-icon" width="24px" height="24px" />
-            </MenuLink>
-            <MenuLink to={href} aria-label="Partychain home page">
-              <PdoctorIcon className="desktop-menu-icon" width="24px" height="24px" />
-            </MenuLink>
-            <MenuLink to="/whitepaper" aria-label="Partychain white paper">
-              <PinfoIcon className="desktop-menu-icon" width="24px" height="24px" />
-            </MenuLink>
-          </Flex>
         </Flex>
       )}
 

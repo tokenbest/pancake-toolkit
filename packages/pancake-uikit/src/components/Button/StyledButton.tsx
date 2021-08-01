@@ -52,6 +52,10 @@ const StyledButton = styled.button<BaseButtonProps>`
   display: inline-flex;
   font-family: inherit;
   font-size: 16px;
+  @media screen and (min-width: 360px) and (max-width: 412px) {
+    font-size: 14px;
+    padding: 6px;
+  }
   font-weight: 600;
   justify-content: center;
   letter-spacing: 0.03em;
@@ -79,7 +83,7 @@ const StyledButton = styled.button<BaseButtonProps>`
     variants: styleVariants,
   })}
   ${layout}
-  ${space}
+  /* ${space} */
 `;
 
 export default StyledButton;

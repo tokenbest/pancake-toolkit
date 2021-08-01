@@ -5,7 +5,7 @@ import { SvgProps } from "../types";
 const Img = styled.div`
   width: 40px;
   height: 40px;
-  margin-right: 15px;
+  /* margin-right: 15px; */
   background: url("/images/slices/pemail.png") no-repeat;
   background-size: 100% 100%;
 
