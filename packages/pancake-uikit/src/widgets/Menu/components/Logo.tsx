@@ -24,7 +24,7 @@ const StyledLink = styled(Link)`
 
   .desktop-icon {
     @media screen and (min-width: 360px) and (max-width: 375px) {
-      width: 101px;
+      width: 135px;
     }
   }
   
