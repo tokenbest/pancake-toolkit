@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.34.26 (2021-10-04)
+
+
+### Bug Fixes
+
+* css style ([d0a959e](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/commit/d0a959ee070e3dced883ba1b678229b3b59a06e4))
+* modify logo width ([ab79cab](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/commit/ab79cabf7ef2442b634b5a34a2c877e408750c43))
+
+
+
+
+
+
 ## [0.34.25](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@tokenbest/uikit@0.34.24...@tokenbest/uikit@0.34.25) (2021-07-24)
 
 **Note:** Version bump only for package @tokenbest/uikit
