@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/eslint-config-pancake/compare/@pancakeswap/eslint-config-pancake@1.1.2...@pancakeswap/eslint-config-pancake@1.1.3) (2021-10-04)
+
+**Note:** Version bump only for package @pancakeswap/eslint-config-pancake
+
+
+
+
+
 ## [1.1.2](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/eslint-config-pancake/compare/@pancakeswap/eslint-config-pancake@1.1.1...@pancakeswap/eslint-config-pancake@1.1.2) (2021-10-04)
 
 **Note:** Version bump only for package @pancakeswap/eslint-config-pancake
